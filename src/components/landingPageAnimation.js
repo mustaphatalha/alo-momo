@@ -22,13 +22,6 @@ export default function WillemHeader() {
     const headerLetter = container.querySelectorAll(`.${styles.letterWhite}`);
     const navLinks = container.querySelectorAll("nav a, p");
 
-    // const tl = gsap.timeline({
-    //   defaults: { ease: "expo.inOut" },
-    //   onStart: () => {
-    //     container.classList.remove(styles.hidden);
-    //   },
-    // });
-
     const tl = gsap.timeline({
     defaults: { ease: "expo.inOut" },
     onStart: () => {
