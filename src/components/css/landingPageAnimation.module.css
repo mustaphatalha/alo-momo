@@ -1,0 +1,111 @@
+.header {
+  position: relative;
+  overflow: hidden;
+  min-height: 100dvh;
+}
+.hidden {
+  display: none;
+}
+.loader {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.h1 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  white-space: nowrap;
+  font-size: 12.5em;
+  line-height: 0.75;
+}
+.h1Start,
+.h1End {
+  display: flex;
+  overflow: hidden;
+}
+.letter {
+  display: block;
+}
+.loaderBox {
+  display: flex;
+  width: 0;
+}
+.loaderBoxInner {
+  position: relative;
+  height: 95%;
+}
+.growingImage {
+  position: absolute;
+  width: 0%;
+  height: 100%;
+  overflow: hidden;
+}
+.growingImageWrap {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+.coverImage,
+.coverExtra {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.heroImage {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw !important;
+  height: 100dvh !important;
+  z-index: 0;
+}
+.hideLoader {
+  opacity: 0;
+  pointer-events: none;
+}
+.heroContent {
+  opacity: 0;
+  /* transform: translateY(40px); */
+  transition: opacity 0.6s ease, transform 0.6s ease;
+  position: relative;
+  z-index: 1;
+}
+
+.heroContent.show {
+  opacity: 1;
+  /* transform: translateY(0); */
+}
+
+
+@media (max-width: 480px) {
+  .h1 {
+    font-size: 2.5rem;
+    gap: 0.1em;
+  }
+
+  .h1Start,
+  .h1End {
+    width: auto;
+  }
+
+  .letter {
+    transform: translateY(0);
+  }
+
+  .loaderBox {
+    width: 0.6em;
+  }
+
+  .loaderBoxInner {
+    height: 70%;
+  }
+
+  .growingImage {
+    border-radius: 0.25rem;
+  }
+}
