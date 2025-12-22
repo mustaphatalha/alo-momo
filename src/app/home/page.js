@@ -5,6 +5,7 @@ import Footer from "@/components/mini-footer";
 import VideoHero from "@/components/video-hero";
 import LetWorkSectionDemo from "@/components/let-work-section-demo";
 import Intro from "../Intro/page";
+import Footerr from "@/components/Footerr";
 
 function Home() {
   return (
@@ -17,7 +18,7 @@ function Home() {
       <VideoHero />
       <ReviewsSectionDemo />
       <LetWorkSectionDemo />
-      <Footer />
+      <Footerr />
     </div>
   )
 }

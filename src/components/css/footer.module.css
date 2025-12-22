@@ -1,0 +1,270 @@
+.footerWrapper {
+  width: 100%;
+  position: relative;
+  overflow: hidden;
+  padding-top: 50px; /* Space for animation trigger */
+}
+
+/* Mobile Footer - Default Visible */
+.mobileFooter {
+  display: block;
+  background-color: #ff0000;
+  color: white;
+  padding: 40px 20px;
+  text-align: center;
+}
+
+.mobileContent {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+}
+
+.navSection {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.navSection a {
+  color: white;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.socials {
+  display: flex;
+  gap: 15px;
+  font-size: 1.5rem;
+}
+
+.contactInfo p {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  margin: 5px 0;
+}
+
+.ctaButton {
+  background-color: #e0e0e0;
+  color: black;
+  border: none;
+  padding: 10px 25px;
+  border-radius: 20px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.credits {
+  font-size: 0.8rem;
+  opacity: 0.8;
+  margin-top: 20px;
+}
+
+/* Desktop Footer - Hidden initially on mobile */
+.desktopFooter {
+  display: none;
+  width: 100%;
+  height: 500px; /* Adjust height as needed */
+  position: relative;
+}
+
+/* Red Container that expands */
+.redContainer {
+  height: 100%;
+  background-color: #ff0000;
+  border-top-right-radius: 150px;
+  border-bottom-right-radius: 150px;
+  position: relative;
+  overflow: visible; /* Allow scooter to stick out */
+  display: flex;
+  align-items: center;
+}
+
+.contentClipper {
+  width: 100%;
+  height: 100%;
+  overflow: hidden; /* Clip the content inside the red box */
+  border-top-right-radius: 150px;
+  border-bottom-right-radius: 150px;
+}
+
+.innerContent {
+  width: 100vw; /* Fixed width to prevent reflow during animation */
+  max-width: 100vw;
+  height: 100%;
+  padding: 40px 60px;
+  box-sizing: border-box;
+}
+
+.contentGrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 20px;
+  height: 100%;
+  align-items: center;
+}
+
+/* Left Column */
+.leftCol {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  color: white;
+}
+
+.navLinks {
+  display: flex;
+  gap: 20px;
+  font-size: 1rem;
+  font-weight: 500;
+}
+
+.navLinks a {
+  color: white;
+  text-decoration: none;
+}
+
+.contactLink {
+  margin-top: 10px; /* Visual separation as per design */
+  display: block;
+}
+
+.socialIcons {
+  display: flex;
+  gap: 15px;
+}
+
+.iconCircle {
+  width: 35px;
+  height: 35px;
+  border: 1px solid white; /* Or slightly transparent white */
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-size: 1rem;
+}
+
+.contactDetails {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+.contactItem {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 0.9rem;
+}
+
+.designerCredit {
+  margin-top: auto;
+  font-size: 0.75rem;
+  opacity: 0.7;
+  border-top: 1px solid rgba(255,255,255,0.3);
+  padding-top: 10px;
+  width: fit-content;
+}
+
+/* Center Column */
+.centerCol {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+.madeBy {
+  color: white;
+  font-size: 1.2rem;
+  margin-bottom: 10px;
+}
+
+.visitButton {
+  background-color: #e0e0e0;
+  border: none;
+  padding: 5px 15px;
+  border-radius: 15px;
+  font-size: 0.9rem;
+  font-weight: bold;
+  cursor: pointer;
+  margin-bottom: 20px;
+}
+
+.diagonalImages {
+  position: relative;
+  width: 200px;
+  height: 200px;
+}
+
+.circleImg {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  background-size: cover;
+  background-position: center;
+  border: 3px solid white;
+  position: absolute;
+}
+
+.circleImg:nth-child(1) { top: 0; left: 0; }
+.circleImg:nth-child(2) { top: 40px; left: 60px; }
+.circleImg:nth-child(3) { top: 80px; left: 120px; }
+
+/* Right Column */
+.rightCol {
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  height: 100%;
+  padding-bottom: 40px;
+}
+
+.orderButton {
+  background-color: #dcdcdc;
+  color: black;
+  border: none;
+  padding: 15px 40px;
+  border-radius: 30px;
+  font-size: 1.2rem;
+  font-weight: bold;
+  cursor: pointer;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+/* Scooter Positioning */
+.scooterWrapper {
+  position: absolute;
+  right: -100px; /* Offset to align with the growing edge properly */
+  bottom: 0;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  z-index: 10;
+  pointer-events: none; /* Let clicks pass through */
+}
+
+.scooterImage {
+  object-fit: contain;
+  /* Adjust size as needed */
+  width: 350px;
+  height: auto;
+}
+
+
+/* Responsive Media Query */
+@media (min-width: 1024px) {
+  .mobileFooter {
+    display: none;
+  }
+  .desktopFooter {
+    display: block;
+  }
+}
