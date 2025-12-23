@@ -527,6 +527,10 @@
         pointer-events: none;
         bottom: -20px;
       }
+      .moto {
+          width: 300px;
+          padding: 40px;
+      }
 }
 @media (min-width: 1000px) {
     .containerr::after {
