@@ -588,7 +588,7 @@
   min-height: 100vh;
   position: relative;
   overflow: hidden;
-  background: #fff;
+  background: red;
 }
 .moto {
   position: absolute;

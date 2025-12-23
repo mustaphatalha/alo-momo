@@ -101,7 +101,8 @@ function IntroAnimation() {
 
       <img
         ref={motoRef}
-        src="/images/intro/moto-1.png"
+        // src="/images/intro/moto-1.png"
+        src="/icones/logo.png"
         className={styles.moto}
         alt="Moto"
       />
