@@ -3,12 +3,14 @@ import React, { useEffect, useState } from "react"
 import { motion } from "framer-motion"
 import Link from "next/link"
 import { cn } from "@/lib/utils"
+import { usePathname } from "next/navigation"
 
 export function NavBar({
   items,
   className
 }) {
-  const [activeTab, setActiveTab] = useState(items[0].name)
+  // const [activeTab, setActiveTab] = useState(items[0].name)
+  const pathname = usePathname()
   const [isMobile, setIsMobile] = useState(false)
 
   useEffect(() => {
@@ -31,13 +33,14 @@ export function NavBar({
         className="flex items-center gap-3 bg-black/40 border border-white/10 backdrop-blur-lg py-1 px-1 rounded-full shadow-lg">
         {items.map((item) => {
           const Icon = item.icon
-          const isActive = activeTab === item.name
+          // const isActive = activeTab === item.name
+          const isActive = pathname === item.url
 
           return (
             <Link
               key={item.name}
               href={item.url}
-              onClick={() => setActiveTab(item.name)}
+              // onClick={() => setActiveTab(item.name)}
               className={cn(
                 "relative cursor-pointer text-sm font-semibold px-6 py-2 rounded-full transition-colors",
                 "text-white/80 hover:text-yellow-400",

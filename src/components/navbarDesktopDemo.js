@@ -3,8 +3,8 @@ import { NavBar } from "@/components/ui/tubelight-navbar"
 
 function NavBarDesktopDemo() {
   const navItems = [
-    { name: 'Home', url: '#', icon: Home },
-    { name: 'About', url: '#', icon: User },
+    { name: 'Home', url: '/home', icon: Home },
+    { name: 'Resstaurantes', url: '/resstaurantes', icon: User },
     { name: 'Projects', url: '#', icon: Briefcase },
     { name: 'Resume', url: '#', icon: FileText }
   ]
